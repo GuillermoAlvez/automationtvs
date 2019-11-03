@@ -9,14 +9,10 @@ package tvs.automation;
  *
  * @author jalvez
  */
-public class Login {
+public class Validaciones {
 
-    public static void acceder() {
-        System.out.println("accede");
-    }
-
-    public static void salir() {
-        System.out.println("sale");
+    static void contactoCreado(String lastname) {
+        Funcionalidad.buscarContacto(lastname);
     }
 
 }
