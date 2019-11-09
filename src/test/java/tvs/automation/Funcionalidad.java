@@ -19,7 +19,7 @@ class Funcionalidad {
 
     static void nuevoContacto(String lastname, Properties p) {
         //instancio propiedades que contienen las propiedades de los elementos
-        Properties pWeb = TestProperties.getWebElementsProperties();
+        Properties pWeb = PropertyFile.getWebElementsProperties();
         // instancio driver
         WebDriver driver = Driver.getInstance();
         // ingreso a url
@@ -120,7 +120,7 @@ class Funcionalidad {
 
     static void eliminarContacto(String lastname) {
         //instancio propiedades que contienen las propiedades de los elementos
-        Properties pWeb = TestProperties.getWebElementsProperties();
+        Properties pWeb = PropertyFile.getWebElementsProperties();
         // instancio driver
         WebDriver driver = Driver.getInstance();
         driver.get("http://egroupware.cursos.ces.com.uy/egroupware/etemplate/process_exec.php?menuaction=addressbook.uicontacts.index");
@@ -142,7 +142,7 @@ class Funcionalidad {
     }
 
     static void buscarContacto(String lastname) {
-        Properties pWeb = TestProperties.getWebElementsProperties();
+        Properties pWeb = PropertyFile.getWebElementsProperties();
         // instancio driver
         WebDriver driver = Driver.getInstance();
         driver.get("http://egroupware.cursos.ces.com.uy/egroupware/etemplate/process_exec.php?menuaction=addressbook.uicontacts.index");

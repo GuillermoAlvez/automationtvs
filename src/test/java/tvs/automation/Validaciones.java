@@ -20,7 +20,7 @@ public class Validaciones {
         Funcionalidad.buscarContacto(lastname);
 //        Assert.assertEquals("asd", "asde");
         WebDriver driver = Driver.getInstance();
-        Properties pWeb = TestProperties.getWebElementsProperties();
+        Properties pWeb = PropertyFile.getWebElementsProperties();
         //
         String real_name_xpath = pWeb.getProperty("validaciones.name_xpath");
         String real_name = driver.findElement(By.xpath(real_name_xpath)).getAttribute("value");

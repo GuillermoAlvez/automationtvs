@@ -12,15 +12,16 @@ public class TestAgregarContacto {
 
     @Before
     public void init() {
-        Properties p = TestProperties.getWebElementsProperties();
+        Properties p = PropertyFile.getWebElementsProperties();
         System.setProperty("webdriver.chrome.driver",
-                p.getProperty("driver.url"));
+                p.getProperty("driver.url")
+        );
     }
 
     @Test
     public void TestAgregar() {
         // leo properties del test
-        p = TestProperties.getProperties("test01");
+        p = PropertyFile.getProperties("test01");
         //genero apellido random para buscar por apellido
         lastname = java.util.UUID.randomUUID().toString().substring(20);
         Autenticacion.autenticarse(p);

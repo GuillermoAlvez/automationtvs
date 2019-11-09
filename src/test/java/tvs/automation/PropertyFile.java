@@ -1,5 +1,5 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
+ * To change this license header, choose License Headers in Project PropertyFile.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
@@ -14,7 +14,7 @@ import java.util.Properties;
  *
  * @author jalvez
  */
-class TestProperties {
+class PropertyFile {
 
     static Properties getProperties(String file) {
         try (InputStream input = new FileInputStream("src/main/resources/" + file + ".properties")) {

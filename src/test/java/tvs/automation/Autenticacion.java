@@ -18,7 +18,7 @@ public class Autenticacion {
 
     public static void autenticarse(Properties p) {
         //instancio propiedades que contienen las propiedades de los elementos
-        Properties pWeb = TestProperties.getWebElementsProperties();
+        Properties pWeb = PropertyFile.getWebElementsProperties();
         // instancio driver
         WebDriver driver = Driver.getInstance();
         String url = p.getProperty("autenticarse.url");
@@ -39,7 +39,7 @@ public class Autenticacion {
 
     public static void salir() {
         //instancio propiedades que contienen las propiedades de los elementos
-        Properties pWeb = TestProperties.getWebElementsProperties();
+        Properties pWeb = PropertyFile.getWebElementsProperties();
         // instancio driver
         WebDriver driver = Driver.getInstance();
         String logout_button_xpath = pWeb.getProperty("salir.logout_xpath");

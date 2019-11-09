@@ -21,11 +21,11 @@ public class TestEliminarContacto {
 
     @Before
     public void init() {
-        p = TestProperties.getWebElementsProperties();
+        p = PropertyFile.getWebElementsProperties();
         System.setProperty("webdriver.chrome.driver",
                 p.getProperty("driver.url"));
         // precondicion: genero contacto a eliminar (reutilizo parte del test01
-        p = TestProperties.getProperties("test02");
+        p = PropertyFile.getProperties("test02");
         lastname = java.util.UUID.randomUUID().toString().substring(20);
         Autenticacion.autenticarse(p);
         Funcionalidad.nuevoContacto(lastname, p);
@@ -33,8 +33,14 @@ public class TestEliminarContacto {
 
     @Test
     public void TestEliminar() {
-        p = TestProperties.getProperties("test02");
+        p = PropertyFile.getProperties("test02");
         Funcionalidad.eliminarContacto(lastname);
+        try {
+            Funcionalidad.buscarContacto(lastname);
+        } catch (org.openqa.selenium.NoSuchElementException ex) {
+            // si no encuentra el elemento en la grilla, el test pasa
+            assert true;
+        }
     }
 
     @After
