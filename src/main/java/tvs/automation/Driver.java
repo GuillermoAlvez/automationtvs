@@ -23,4 +23,9 @@ public class Driver {
         return instance;
     }
 
+    public static void close() {
+        instance.close();
+        instance = null;
+    }
+
 }
