@@ -24,7 +24,8 @@ public class TestEliminarContacto {
         p = PropertyFile.getWebElementsProperties();
         System.setProperty("webdriver.chrome.driver",
                 p.getProperty("driver.url"));
-        // precondicion: genero contacto a eliminar (reutilizo parte del test01
+        // genero contacto a eliminar (reutilizo partes de Agregar Contacto)
+        // pero con properties nuevo
         p = PropertyFile.getProperties("test02");
         lastname = java.util.UUID.randomUUID().toString().substring(20);
         Autenticacion.autenticarse(p);
